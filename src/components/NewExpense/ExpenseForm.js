@@ -14,8 +14,8 @@ const ExpenseForm = () => {
   });
 
   const titleChangeHandler = (event) => {
-      setUserInput({
     // setEnteredTitle(event.target.value);
+    setUserInput({
       ...userInput,
       enteredTitle: event.target.value,
     });
@@ -43,9 +43,9 @@ const ExpenseForm = () => {
           <label>{enteredTitle}</label>
           <input type="text" onChange={titleChangeHandler} />
         </div>
-          <input
         <div className="new-expense__control">
           <label>{enteredAmount}</label>
+          <input
             type="number"
             min="0.01"
             step="0.01"
